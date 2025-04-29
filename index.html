@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Samsung Gallery Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <h1>Gallery</h1>
+    <div class="menu">⋮</div>
+  </header>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="pictures">Pictures</button>
+    <button class="tab-btn" data-tab="albums">Albums</button>
+    <button class="tab-btn" data-tab="stories">Stories</button>
+  </div>
+
+  <!-- Content Sections -->
+  <main class="tab-content">
+    <section id="pictures" class="tab-section active">
+      <div class="gallery">
+        <img src="https://picsum.photos/id/1015/400/300" alt="pic1" />
+        <img src="https://picsum.photos/id/1016/400/300" alt="pic2" />
+        <img src="https://picsum.photos/id/1018/400/300" alt="pic3" />
+        <img src="https://picsum.photos/id/1024/400/300" alt="pic4" />
+        <img src="https://picsum.photos/id/1027/400/300" alt="pic5" />
+        <img src="https://picsum.photos/id/1031/400/300" alt="pic6" />
+      </div>
+    </section>
+
+    <section id="albums" class="tab-section">
+      <p style="padding: 20px;">📁 No albums yet.</p>
+    </section>
+
+    <section id="stories" class="tab-section">
+      <p style="padding: 20px;">📖 Stories coming soon!</p>
+    </section>
+  </main>
+
+  <!-- FAB -->
+  <button class="fab">+</button>
+
+  <!-- Viewer -->
+  <div class="viewer" id="viewer">
+    <span class="close" onclick="closeViewer()">×</span>
+    <img id="viewer-img" />
+    <button class="nav prev" onclick="prevImage()">⟨</button>
+    <button class="nav next" onclick="nextImage()">⟩</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
